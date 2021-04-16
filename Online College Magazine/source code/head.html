@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<head>
+<link rel="stylesheet" href="style.css"></link> 
+ <script>
+var imgsrc=new Array(1);
+var loadedimages=new Array(7);
+
+imgsrc[0]=1;
+
+
+loadedimages[1]=new Image();
+loadedimages[1].src="1.JPG";
+loadedimages[2]=new Image();
+loadedimages[2].src="2.JPG";
+loadedimages[3]=new Image();
+loadedimages[3].src="3.JPG";
+loadedimages[4]=new Image();
+loadedimages[4].src="4.JPG";
+loadedimages[5]=new Image();
+loadedimages[5].src="5.JPG";
+loadedimages[6]=new Image();
+loadedimages[6].src="6.JPG";
+loadedimages[7]=new Image();
+loadedimages[7].src="7.JPG";
+
+
+
+function trans()
+{
+
+image.style.filter="blendTrans(duration=2)";
+image.filters.blendTrans.Apply();
+image.filters.blendTrans.Play();
+image.src=loadedimages[(imgsrc[0]%7+1)].src;
+
+imgsrc[0]+=1;
+setTimeout("trans()",3000);
+}
+</script>
+</head>
+<BODY onload="trans()">
+<TABLE align="center">
+<TR>
+	<td align="left" rowspan="2"><!-- <img src="#" height="80" width="80"> --></td>
+	<TD rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+	<TD rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+	<TD rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+	<td colspan="2" align="left"><font color="blue"  style="font-family:serif;font-size: 15pt;">
+	
+	<h2 style="color: blue">Abhinav HiTech College of Engineering</h2>
+	<H2 style="color: blue">Online College Magazine</H2></font></td>
+    
+	<td align="left" rowspan="2"><!-- <img id="image" src="#" height=98 width=120 > --></td>
+</TR>
+<TR>
+	<TD align="center">&nbsp;&nbsp;&nbsp;&nbsp;<a href="middleframe.html" target="middle"><font size="3">Home</font></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="admin_login.html" target="middle"><font size="3" >Admin</font></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="mod_login.html" target="middle"><font size="3">Moderator</font></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="mem_login.html" target="middle"><font size="3">Members</font></a>&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+</BODY>
+</HTML>

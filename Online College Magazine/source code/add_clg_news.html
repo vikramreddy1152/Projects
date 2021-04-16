@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> addclg news</TITLE>
+<script language="javascript">
+function validate()
+{
+   if(document.form1.heading.value=="")
+   {
+		alert("please enter heading.....");
+		document.form1.heading.focus();
+		return false;
+   }
+   if(document.form1.news.value=="")
+   {
+		alert("please enter news.....");
+		document.form1.news.focus();
+		return false;
+   }
+   return true;
+}
+</script>
+<link rel="stylesheet" href="style.css"></link>
+</HEAD>
+<BODY><BR><BR>
+<h2 align=center><font color="purple">Enter news </font></h1>
+<form action="add_clg_news.jsp" name=form1 id=form1 onsubmit="return validate()">
+<table align="center"  cellpadding="3" cellspacing="5">
+<tr>
+     <td align="center"><strong><font size="4" color="maroon">Headding</font></strong></td>
+     <td align="center"><input type=text name="heading"></td>
+</tr>
+<tr>
+     <td align="center"><strong><font size="4" color="maroon">Enter News</font></strong></td>
+     <td align="center"><textarea name="news" rows="5" cols="16"></textarea></td>
+</tr>
+<tr>
+     <td colspan="2" align="center" ><input type="submit" class="sub" value="SAVE" >&nbsp;&nbsp;&nbsp;<input type="reset" value="RESET" ></td>
+</tr>
+</table>
+</form>
+</BODY>
+</HTML>

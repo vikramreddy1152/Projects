@@ -1,0 +1,65 @@
+body {
+                 
+                 
+                 
+                 background-image:URL("ahct1.jpg");
+                 
+                 background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+			}
+
+a
+{
+font-weight:bold;
+padding:2px;
+border-top:1px solide white;
+border-right:1px solide white;
+border-left:1px solide white;
+border-bottom:1px solide white;
+text-align:center;
+font-family:cursive;
+font-size:15px;
+}
+a:hover
+{
+	color:navy;
+	font-family:cursive;
+	text-decoration:none;
+	background-color:white;
+	font-size:15px;
+}
+a:visited
+{ 
+    color:green;  
+	text-decoration:none;
+}
+a:active
+{
+    font-size:15px;
+	background-color:gray;
+	color:white;
+	text-decoration:none;
+}
+a:link
+{
+    color:green;
+	font-size:15px;
+	text-decoration:none;
+    background-color:silver;
+}
+.ttl
+{
+padding:2px;
+font-weight:bold;
+background-color:#00A140;
+}
+INPUT {
+	color:fuchsia; 
+	border :thin;
+	border-style:fantasy;
+	font-family:cursive;
+	font-weight:bold;
+	}
+	

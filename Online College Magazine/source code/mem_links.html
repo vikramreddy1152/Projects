@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<link rel="stylesheet" href="style.css"></link>
+<script language="javascript">
+	function f()
+     {
+         a=window.confirm("Are u sure ?");
+         if(a)
+            return true;
+	     else 
+	        return false;
+    }
+	</script>
+</HEAD>
+
+<BODY>
+
+<br>
+<a href="mem_home.jsp" target="home"><font size="3">Member Home</font></a>
+<br>
+<a href="inbox.jsp" target="home"><font size="3"> Inbox</font></a>
+<br>
+<a href="post_articles.jsp" target="home"><font size="3"> Post Articles</font></a>
+<br>
+<a href="update_articles.jsp" target="home"><font size="3"> Update Articles</font></a>
+<br>
+<a href="mem_update_profile.jsp" target="home"><font size="3">Update Profile</font></a>
+<br>
+<a href="mem_veiwarticles.jsp" target="home"><font size="3">View Articles</font></a>
+<br>
+<a href="comments.jsp" target="home"><font size="3">Comments</font></a>
+<br>
+<a href="logout.jsp" target="middle"><font size="3">Logout</font></a>
+<BR>
+<br>
+<form action="delete_mem.jsp" target="middle" onsubmit="return f()">
+<input type="submit" name="sub" value="Delete Account">
+</form>
+</BODY>
+</HTML>

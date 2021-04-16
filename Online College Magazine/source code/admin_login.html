@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>Administrator Login page</TITLE>
+ 
+ <script language=javascript>
+ function window_onload() 
+	{
+          document.form1.submit1.disabled=true;
+          document.form1.uid.focus();
+	}
+
+ function password1_onfocus() 
+   {
+       if(document.form1.uid.value=="")
+	   {
+		 alert("User Name is compulsory");
+		 document.form1.uid.focus();
+		 return false;
+	   }
+      else
+	   {
+		 document.form1.submit1.disabled=false;
+	   }
+	}
+
+function validate()
+	{
+	  if(document.form1.pass.value=="")
+	   {
+	     alert("Please enter password...");
+         document.form1.pass.focus();
+		 return false;
+		 }
+		 
+       if(document.form1.pass.value.length<4)
+	   {
+         alert("Password should be atleast 4 charecters");
+         document.form1.pass.focus();
+		 return false;
+		 }
+      return true;
+	}
+</script>
+<link rel="stylesheet" href="style.css"></link>
+</HEAD>
+<BODY background="bg.jpg" LANGUAGE=javascript onload="return window_onload()">
+<br><br>
+<center>
+<h1><font color="red">Administrator Login </font></h1>
+<br>
+<form name="form1" id="form1" action="logver.jsp" onsubmit="return validate()">
+<table align="center" cellpadding="3" cellspacing="5" border="2" style="border-color: blue;">
+  <tr><td><font size="5" color="blue">User Name</font></td>
+       <td><input type="text" name="uid"></td>
+  </tr>
+  <tr><td><font size="5" color="blue">Password</font></td>
+       <td><input type="password" name="pass" LANGUAGE=javascript onfocus="return password1_onfocus()"></td>
+  </tr>
+  <tr style="color:blue;">
+       <td colspan="2" align="center"><input type="submit" value="LOGIN" class="sub" name="submit1"></td>
+  </tr>
+</form>
+</center>
+</BODY>
+</HTML>

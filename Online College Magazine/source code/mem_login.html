@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>College members Login page</TITLE>
+<script language=javascript>
+  function window_onload() 
+	{
+          document.form1.submit1.disabled=true;
+          document.form1.uid.focus();
+	}
+
+  function password1_onfocus() 
+	{
+       if(document.form1.uid.value=="")
+	   {
+		 alert("User Name is compulsory");
+		 document.form1.uid.focus();
+		 return false;
+	   }
+      else
+	   {
+		 document.form1.submit1.disabled=false;
+	   }
+	}
+	function validate()
+	{
+	  if(document.form1.pass.value=="")
+	   {
+	     alert("Please enter password...");
+         document.form1.pass.focus();
+		 return false;
+		 }
+		 
+       if(document.form1.pass.value.length<4)
+	   {
+         alert("Password should be atleast 4 charecters");
+         document.form1.pass.focus();
+		 return false;
+		 }
+      return true;
+	}
+</script>
+<link rel="stylesheet" href="style.css"></link>
+</HEAD>
+
+<BODY LANGUAGE=javascript onload="return window_onload()">
+<br><br>
+<center>
+<h2><font color="white">Members Login</font> </h2>
+<br>
+<form name="form1" action="mem_log_ver.jsp" onsubmit="return validate()">
+<table align="center" cellpadding="3" cellspacing="5">
+  <tr><td><font size="4" color="white">Login Id</font></td>
+       <td><input type="text" name="uid"></td>
+  </tr>
+  <tr><td><font size="4" color="white">Password</font></td>
+       <td><input type="password" name="pass" LANGUAGE=javascript onfocus="return password1_onfocus()"></td>
+  </tr>
+  <tr>
+ <td colspan="2" align="center"><input type="submit" value="LOGIN" name="submit1" class="sub">&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+ <a href="mem_register.jsp">Register here</a></td>
+  </tr>
+</form>
+</center>
+</BODY>
+</HTML>
